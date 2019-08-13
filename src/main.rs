@@ -2,10 +2,10 @@ mod ga;
 
 use ga::*;
 
-const GENERATION: i32 = 20;
+const GENERATION: i32 = 100;
 
 fn main() {
-    let mut pop = Population::new(10, 10, 0.1, 0.2);
+    let mut pop = Population::new(100, 30, 0.3, 0.2);
 
     pop.evaluate();
     println!("Generation : 0");

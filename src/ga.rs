@@ -99,9 +99,10 @@ impl Population {
     }
 
     pub fn evolution(&mut self) {
-        self.evaluate();
         let mut rng = rand::thread_rng();
         let len = self.individuals.len();
+        
+        self.evaluate();
         self.elite();
 
         if self.individuals.len() <= 1 {
