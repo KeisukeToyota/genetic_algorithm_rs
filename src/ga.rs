@@ -100,7 +100,6 @@ impl Population {
 
     pub fn evolution(&mut self) {
         let mut rng = rand::thread_rng();
-        let len = self.individuals.len();
 
         self.evaluate();
         self.elite();
@@ -109,7 +108,7 @@ impl Population {
             panic!("Gene length that cannot be crossover...");
         }
 
-        while self.individuals.len() < len {
+        while self.individuals.len() < self.gene_length {
             let i = rng.gen_range(0, self.individuals.len() - 1);
             let mut child = self.individuals[i].clone();
             let m: f32 = rng.gen();
