@@ -101,7 +101,7 @@ impl Population {
     pub fn evolution(&mut self) {
         let mut rng = rand::thread_rng();
         let len = self.individuals.len();
-        
+
         self.evaluate();
         self.elite();
 
